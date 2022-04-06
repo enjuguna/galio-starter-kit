@@ -28,7 +28,7 @@ class AboutUs extends React.Component {
               <Icon 
                 name="menu"
                 family="feather"
-                size={theme.SIZES.BASE}
+                size={theme.SIZES.BASE * 1.7}
                 color={theme.COLORS.ICON}
               />
             </TouchableOpacity>
