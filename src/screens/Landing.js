@@ -30,7 +30,7 @@ export default class Landing extends React.Component {
               <Icon 
                 name="menu"
                 family="feather"
-                size={theme.SIZES.BASE}
+                size={theme.SIZES.BASE * 1.7}
                 color={theme.COLORS.ICON}
               />
             </TouchableOpacity>
@@ -57,7 +57,9 @@ export default class Landing extends React.Component {
     <Button color="info" style={styles.button} round>
                   Login
                 </Button>
+
     </Block>
+    
     <Block style={{ padding: theme.SIZES.BASE }}>
     <Text style={{ marginVertical: theme.SIZES.FONT / 4 }} h4>Options</Text>
     </Block>
