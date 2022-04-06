@@ -21,6 +21,7 @@ import Dashboard from './src/screens/Dashboard';
 import Register from './src/screens/Register';
 import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
+import Landing from './src/screens/Landing';
 
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
@@ -85,9 +86,16 @@ MenuIcon.propTypes = {
 
 const screens = {
   Home: {
+    screen: Landing,
+    navigationOptions: {
+      drawerLabel: 'Home',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  Components: {
     screen: Components,
     navigationOptions: {
-      drawerLabel: 'Components',
+      drawerLabel: 'Landing',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
@@ -112,7 +120,7 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  /*
+  
   Dashboard: {
     screen: Dashboard,
     navigationOptions: {
@@ -120,7 +128,6 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  */
   News: {
     screen: News,
     navigationOptions: {
@@ -135,7 +142,6 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  /*
   Presentation: {
     screen: Presentation,
     navigationOptions: {
@@ -171,7 +177,6 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
-  */
 };
 
 const options = {
