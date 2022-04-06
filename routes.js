@@ -34,8 +34,8 @@ const GalioDrawer = props => (
     <Block space="between" row style={styles.header}>
       <Block flex={0.3}><Image source={{ uri: 'http://i.pravatar.cc/100' }} style={styles.avatar} /></Block>
       <Block flex style={styles.middle}>
-        <Text size={theme.SIZES.FONT * 0.875}>Demo user</Text>
-        <Text muted size={theme.SIZES.FONT * 0.875}>React Native</Text>
+        <Text size={theme.SIZES.FONT * 1.575}>John Mwangi</Text>
+        <Text muted size={theme.SIZES.FONT * 1.175}>Activist</Text>
       </Block>
     </Block>
     <ScrollView>
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    paddingHorizontal: theme.SIZES.BASE,
-    paddingTop: theme.SIZES.BASE * 0.6875,
+    paddingHorizontal: theme.SIZES.BASE * 2,
+    paddingTop: theme.SIZES.BASE * 1.6875,
     paddingBottom: theme.SIZES.BASE * 1.6875,
     borderBottomColor: '#D8D8D8',
     borderBottomWidth: 0.5,
@@ -92,115 +92,115 @@ const screens = {
     screen: Landing,
     navigationOptions: {
       drawerLabel: 'Home',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="home" family="font-awesome" focused={props.focused} />,
     },
   },
   AboutUs: {
     screen: AboutUs,
     navigationOptions: {
       drawerLabel: 'About Us',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="address-card" family="font-awesome" focused={props.focused} />,
     },
   },
   Privacypolicy: {
     screen: Privacypolicy,
     navigationOptions: {
       drawerLabel: 'Privacy policy',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="shield" family="font-awesome" focused={props.focused} />,
     },
   },
   FAQ: {
     screen: FAQ,
     navigationOptions: {
       drawerLabel: 'FAQ',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+      drawerIcon: props => <MenuIcon name="question" family="font-awesome" focused={props.focused} />,
     },
   },
-  Components: {
-    screen: Components,
-    navigationOptions: {
-      drawerLabel: 'Landing',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Cards: {
-    screen: Cards,
-    navigationOptions: {
-      drawerLabel: 'Cards',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Article: {
-    screen: Article,
-    navigationOptions: {
-      drawerLabel: 'Article Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  ArticleCover: {
-    screen: ArticleCover,
-    navigationOptions: {
-      drawerLabel: 'Article Cover',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
+  // Components: {
+  //   screen: Components,
+  //   navigationOptions: {
+  //     drawerLabel: 'Landing',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Cards: {
+  //   screen: Cards,
+  //   navigationOptions: {
+  //     drawerLabel: 'Cards',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Article: {
+  //   screen: Article,
+  //   navigationOptions: {
+  //     drawerLabel: 'Article Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // ArticleCover: {
+  //   screen: ArticleCover,
+  //   navigationOptions: {
+  //     drawerLabel: 'Article Cover',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
   
-  Dashboard: {
-    screen: Dashboard,
-    navigationOptions: {
-      drawerLabel: 'Dashboard screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  News: {
-    screen: News,
-    navigationOptions: {
-      drawerLabel: 'News Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  OrderConfirmed: {
-    screen: OrderConfirmed,
-    navigationOptions: {
-      drawerLabel: 'Order Confirmed',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Presentation: {
-    screen: Presentation,
-    navigationOptions: {
-      drawerLabel: 'Presentation Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Login: {
-    screen: Login,
-    navigationOptions: {
-      drawerLabel: 'Login Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Register: {
-    screen: Register,
-    navigationOptions: {
-      drawerLabel: 'Register Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Registerv2: {
-    screen: Registerv2,
-    navigationOptions: {
-      drawerLabel: 'Register Screen v2',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Grid: {
-    screen: Grid,
-    navigationOptions: {
-      drawerLabel: 'Grid Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
+  // Dashboard: {
+  //   screen: Dashboard,
+  //   navigationOptions: {
+  //     drawerLabel: 'Dashboard screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // News: {
+  //   screen: News,
+  //   navigationOptions: {
+  //     drawerLabel: 'News Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // OrderConfirmed: {
+  //   screen: OrderConfirmed,
+  //   navigationOptions: {
+  //     drawerLabel: 'Order Confirmed',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Presentation: {
+  //   screen: Presentation,
+  //   navigationOptions: {
+  //     drawerLabel: 'Presentation Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Login: {
+  //   screen: Login,
+  //   navigationOptions: {
+  //     drawerLabel: 'Login Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Register: {
+  //   screen: Register,
+  //   navigationOptions: {
+  //     drawerLabel: 'Register Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Registerv2: {
+  //   screen: Registerv2,
+  //   navigationOptions: {
+  //     drawerLabel: 'Register Screen v2',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Grid: {
+  //   screen: Grid,
+  //   navigationOptions: {
+  //     drawerLabel: 'Grid Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
 };
 
 const options = {
@@ -209,7 +209,7 @@ const options = {
     labelStyle: {
       fontWeight: '500',
       color: theme.COLORS.GREY,
-      fontSize: theme.SIZES.FONT * 0.875,
+      fontSize: theme.SIZES.FONT * 1.375,
       marginLeft: theme.SIZES.BASE * 0.75,
     },
     activeLabelStyle: {
@@ -221,7 +221,7 @@ const options = {
     },
     iconContainerStyle: {
       marginHorizontal: 0,
-      marginLeft: theme.SIZES.BASE * 1.65,
+      marginLeft: theme.SIZES.BASE * 1.85,
       // marginRight: theme.SIZES.BASE * 0.76,
     },
   },
