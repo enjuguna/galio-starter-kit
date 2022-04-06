@@ -47,9 +47,7 @@ class FAQ extends React.Component {
           style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE } : null}
         />
         <Block flex center space="around" style={styles.container}>
-          <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
         <Accordion dataArray={data} />
-              </ScrollView>
         </Block>
         
       </Block>
