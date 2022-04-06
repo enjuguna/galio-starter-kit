@@ -68,6 +68,7 @@ class OrderConfirmed extends React.Component {
             Continue Shopping
           </Button>
         </Block>
+        
       </Block>
     )
   }

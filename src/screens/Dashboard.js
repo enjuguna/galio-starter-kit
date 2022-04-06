@@ -117,28 +117,20 @@ class Dashboard extends React.Component {
     );
   }
 
-  renderCard = (props, index) => {
-    const gradientColors = index % 2 ? GRADIENT_BLUE : GRADIENT_PINK;
+  renderCard = () => {
 
     return (
-      <Block row center card shadow space="between" style={styles.card} key={props.title}>
-        <Gradient
-          start={[0.45, 0.45]}
-          end={[0.90, 0.90]}
-          colors={gradientColors}
-          style={[styles.gradient, styles.left]}
-        >
+      <Block row center card shadow space="between" style={styles.card} key={'title'}>
           <Icon
             size={BASE_SIZE}
-            name={props.icon}
+            name={'list-bullet'}
             color={COLOR_WHITE}
-            family={props.iconFamily}
+            family={'Galio'}
           />
-        </Gradient>
 
         <Block flex>
-          <Text size={BASE_SIZE * 1.125}>{props.title}</Text>
-          <Text size={BASE_SIZE * 0.875} muted>{props.subtitle}</Text>
+          <Text size={BASE_SIZE * 1.125}>{'title'}</Text>
+          <Text size={BASE_SIZE * 0.875} muted>{'subtitle'}</Text>
         </Block>
         <Button style={styles.right}>
           <Icon size={BASE_SIZE} name="minimal-right" family="Galio" color={COLOR_GREY} />
@@ -147,7 +139,6 @@ class Dashboard extends React.Component {
     );
   }
 
-  renderCards = () => cards.map((card, index) => this.renderCard(card, index))
 
   render() {
     return (
@@ -160,7 +151,7 @@ class Dashboard extends React.Component {
 
         {/* cards */}
         <ScrollView style={{ flex: 1 }}>
-          {this.renderCards()}
+          {this.renderCard()}
         </ScrollView>
       </Block>
     );

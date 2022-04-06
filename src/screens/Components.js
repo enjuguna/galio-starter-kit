@@ -18,7 +18,7 @@ export default class Components extends React.Component {
     return (
       <Block safe flex>
         <NavBar
-          title="Galio Components"
+          title="HRD Application"
           right={(
             <Button
               onlyIcon
