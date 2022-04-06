@@ -22,6 +22,9 @@ import Register from './src/screens/Register';
 import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
 import Landing from './src/screens/Landing';
+import Privacypolicy from './src/screens/Privacypolicy';
+import AboutUs from './src/screens/AboutUs';
+import FAQ from './src/screens/FAQ';
 
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
@@ -31,7 +34,7 @@ const GalioDrawer = props => (
     <Block space="between" row style={styles.header}>
       <Block flex={0.3}><Image source={{ uri: 'http://i.pravatar.cc/100' }} style={styles.avatar} /></Block>
       <Block flex style={styles.middle}>
-        <Text size={theme.SIZES.FONT * 0.875}>Galio Framework</Text>
+        <Text size={theme.SIZES.FONT * 0.875}>Demo user</Text>
         <Text muted size={theme.SIZES.FONT * 0.875}>React Native</Text>
       </Block>
     </Block>
@@ -89,6 +92,27 @@ const screens = {
     screen: Landing,
     navigationOptions: {
       drawerLabel: 'Home',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  AboutUs: {
+    screen: AboutUs,
+    navigationOptions: {
+      drawerLabel: 'About Us',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  Privacypolicy: {
+    screen: Privacypolicy,
+    navigationOptions: {
+      drawerLabel: 'Privacy policy',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  FAQ: {
+    screen: FAQ,
+    navigationOptions: {
+      drawerLabel: 'FAQ',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },

@@ -61,7 +61,7 @@ export default class Landing extends React.Component {
     <Block style={{ padding: theme.SIZES.BASE }}>
     <Text style={{ marginVertical: theme.SIZES.FONT / 4 }} h4>Options</Text>
     </Block>
-    <Block row center card shadow space="between" style={styles.card1} key={'title'}>
+    <Block row center card shadow space="between" style={styles.card1} key={'title'} onPress={() => navigation.openDrawer()}>
           <Icon
             size={BASE_SIZE}
             name={'list-bullet'}
@@ -119,7 +119,7 @@ export default class Landing extends React.Component {
 
         <Block flex>
           <Text size={BASE_SIZE * 1.125}>{'Register as a HRD'}</Text>
-          <Text size={BASE_SIZE * 0.875} muted>{'Register for an account as a humen righs defendant'}</Text>
+          <Text size={BASE_SIZE * 0.875} muted>{'Register for an account as a human rights defendant'}</Text>
         </Block>
         <Button style={styles.right}>
           <Icon size={BASE_SIZE} name="minimal-right" family="Galio" color={COLOR_GREY} />
