@@ -25,6 +25,7 @@ import Landing from './src/screens/Landing';
 import Privacypolicy from './src/screens/Privacypolicy';
 import AboutUs from './src/screens/AboutUs';
 import FAQ from './src/screens/FAQ';
+import PreviewLocation from './src/screens/PreviewLocation';
 
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
@@ -201,6 +202,13 @@ const screens = {
   //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
   //   },
   // },
+  PreviewLocation: {
+    screen: PreviewLocation,
+    navigationOptions: {
+      drawerLabel: 'Preview Location',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
 };
 
 const options = {

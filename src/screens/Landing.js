@@ -35,7 +35,7 @@ export default class Landing extends React.Component {
               />
             </TouchableOpacity>
           )}
-          style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE } : null}
+          style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE  } : null}
         />
 
     <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
