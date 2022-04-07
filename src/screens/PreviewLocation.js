@@ -8,6 +8,10 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+import * as Permissions from 'expo-permissions';
+import * as Location from 'expo-location';
+
+
 // galio components
 import {
   Text, Button, Block, NavBar, Icon
@@ -17,7 +21,34 @@ import theme from '../theme';
 const { height } = Dimensions.get('window');
 
 class PreviewLocation extends React.Component {
+
+  state = {
+      location: {},
+      errorMessage: '',
+  }
+
+  componentWillMount(){
+      this._getLocation();
+  }
+
+  _getLocation = async () => {
+      const { status } = await Permissions.askAsync(Permissions.LOCATION_FOREGROUND);
+
+      if(status !== 'granted'){
+          console.log('PERMISSION NOT GRANTED!');
+          this.setState({
+              errorMessage: 'PERMISSION NOT GRANTED!'
+          })
+      }
+      
+      const userLocation =  await Location.getCurrentPositionAsync();
+      this.setState({
+          location:userLocation
+      })
+    
+  }
   render() {
+    curr_location = this.state.location;
     const { navigation } = this.props;
     return (
       <Block safe flex>
@@ -40,8 +71,12 @@ class PreviewLocation extends React.Component {
           <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
           <Block flex style={{ padding: theme.SIZES.BASE }}>
                 <Text p>
-                
-Here is the location</Text>
+
+Here is the location
+</Text>
+<Text p>
+{JSON.stringify(curr_location)}
+</Text>
               </Block>
               </ScrollView>
           </Block>

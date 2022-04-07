@@ -38,11 +38,13 @@
     "expo": "^44.0.0",
     "expo-constants": "~13.0.1",
     "expo-linear-gradient": "~11.0.3",
+    "expo-location": "^14.0.2",
+    "expo-permissions": "^13.1.1",
     "galio-framework": "^0.6.3",
-    "react": "17.0.1",
-    "react-native": "0.64.3",
+    "react": "*",
+    "react-native": "*",
     "react-native-svg": "12.1.1",
-    "react-native-vector-icons": "^6.0.2"
+    "react-native-vector-icons": "*"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.0",
