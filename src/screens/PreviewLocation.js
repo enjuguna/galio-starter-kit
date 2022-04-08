@@ -8,47 +8,25 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+import MapView, { Marker } from 'react-native-maps';
 import * as Permissions from 'expo-permissions';
+import { FontAwesome } from '@expo/vector-icons'; 
 import * as Location from 'expo-location';
 
+import MapComponent from '../components/MapComponent';
 
 // galio components
-import {
-  Text, Button, Block, NavBar, Icon
-} from 'galio-framework';
+import { Text, Button, Block, NavBar, Icon } from 'galio-framework';
 import theme from '../theme';
 
-const { height } = Dimensions.get('window');
+
+
+
 
 class PreviewLocation extends React.Component {
 
-  state = {
-      location: {},
-      errorMessage: '',
-  }
-
-  componentWillMount(){
-      this._getLocation();
-  }
-
-  _getLocation = async () => {
-      const { status } = await Permissions.askAsync(Permissions.LOCATION_FOREGROUND);
-
-      if(status !== 'granted'){
-          console.log('PERMISSION NOT GRANTED!');
-          this.setState({
-              errorMessage: 'PERMISSION NOT GRANTED!'
-          })
-      }
-      
-      const userLocation =  await Location.getCurrentPositionAsync();
-      this.setState({
-          location:userLocation
-      })
-    
-  }
+ 
   render() {
-    curr_location = this.state.location;
     const { navigation } = this.props;
     return (
       <Block safe flex>
@@ -66,22 +44,18 @@ class PreviewLocation extends React.Component {
           )}
           style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE } : null}
         />
-        <Block flex center space="around" style={styles.container}>
-          <Block center flex={2}>
           <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
-          <Block flex style={{ padding: theme.SIZES.BASE }}>
-                <Text p>
+          <Block flex style={{ padding: theme.SIZES.BASE * 1.22}}>
+<MapComponent />
 
-Here is the location
-</Text>
-<Text p>
-{JSON.stringify(curr_location)}
-</Text>
               </Block>
+              <Block flex style={{ padding: theme.SIZES.BASE }}>
+
+              <Button color="info" style={styles.button}  disabled={!MapComponent} round>
+                  Continue
+                </Button>
+                </Block>
               </ScrollView>
-          </Block>
-        </Block>
-        
       </Block>
     )
   }
@@ -93,8 +67,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.SIZES.BASE,
     backgroundColor: theme.COLORS.WHITE,
     marginTop: theme.SIZES.BASE * 1.875,
-    marginBottom: height * 0.1
-  }
+  },
+ 
 });
 
 export default PreviewLocation;

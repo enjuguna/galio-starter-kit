@@ -117,13 +117,13 @@ const screens = {
       drawerIcon: props => <MenuIcon name="question" family="font-awesome" focused={props.focused} />,
     },
   },
-  // Components: {
-  //   screen: Components,
-  //   navigationOptions: {
-  //     drawerLabel: 'Landing',
-  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-  //   },
-  // },
+  Components: {
+    screen: Components,
+    navigationOptions: {
+      drawerLabel: 'Landing',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
   // Cards: {
   //   screen: Cards,
   //   navigationOptions: {
