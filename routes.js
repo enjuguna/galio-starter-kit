@@ -26,6 +26,7 @@ import Privacypolicy from './src/screens/Privacypolicy';
 import AboutUs from './src/screens/AboutUs';
 import FAQ from './src/screens/FAQ';
 import PreviewLocation from './src/screens/PreviewLocation';
+import PoliceContacts from './src/screens/PoliceContacts';
 
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
@@ -121,6 +122,13 @@ const screens = {
     screen: Components,
     navigationOptions: {
       drawerLabel: 'Landing',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  PoliceContacts: {
+    screen: PoliceContacts,
+    navigationOptions: {
+      drawerLabel: 'PoliceContacts',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
