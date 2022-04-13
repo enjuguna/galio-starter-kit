@@ -27,6 +27,7 @@ import AboutUs from './src/screens/AboutUs';
 import FAQ from './src/screens/FAQ';
 import PreviewLocation from './src/screens/PreviewLocation';
 import PoliceContacts from './src/screens/PoliceContacts';
+import CategoriesMenu from './src/screens/CategoriesMenu';
 
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
@@ -132,6 +133,13 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
+  CategoriesMenu: {
+    screen: CategoriesMenu,
+    navigationOptions: {
+      drawerLabel: 'CategoriesMenu',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
   // Cards: {
   //   screen: Cards,
   //   navigationOptions: {
@@ -203,13 +211,13 @@ const screens = {
   //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
   //   },
   // },
-  // Grid: {
-  //   screen: Grid,
-  //   navigationOptions: {
-  //     drawerLabel: 'Grid Screen',
-  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-  //   },
-  // },
+  Grid: {
+    screen: Grid,
+    navigationOptions: {
+      drawerLabel: 'Grid Screen',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
   PreviewLocation: {
     screen: PreviewLocation,
     navigationOptions: {

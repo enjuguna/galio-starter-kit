@@ -1,9 +1,8 @@
 import React from 'react';
-import { Dimensions, StyleSheet, Platform} from 'react-native';
+import { Dimensions, StyleSheet, Platform, TouchableOpacity } from 'react-native';
 // galio components
-import { Button, Icon, Block, Text, NavBar } from 'galio-framework';
+import {  Button, Icon, Block, Text, NavBar } from 'galio-framework';
 import theme from '../theme';
-
 
 const { width } = Dimensions.get('screen');
 const BASE_SIZE = theme.SIZES.BASE;
@@ -18,59 +17,68 @@ const chunk = (arr, size) => {
 
 const grids = [
   {
-    title: 'Android',
-    icon: 'social-android',
+    title: 'Dawn Raids',
+    icon: 'x-circle',
     family: 'Foundation',
   },
   {
-    title: 'Apple',
-    icon: 'social-apple',
+    title: 'Cyber/Data Incident',
+    icon: 'laptop',
     family: 'Foundation',
   },
   {
-    title: 'Digg',
-    icon: 'social-digg',
+    title: 'Unannounced Visit',
+    icon: 'unlock',
     family: 'Foundation',
   },
   {
-    title: '500px',
-    icon: '500px',
-    family: 'Entypo',
+    title: 'Seizure of Documents',
+    icon: 'shield',
+    family: 'Foundation',
   },
   {
-    title: 'App Store',
-    icon: 'app-store',
-    family: 'Entypo',
+    title: 'Privileged Documents',
+    icon: 'folder-lock',
+    family: 'Foundation',
   },
   {
-    title: 'Baidu',
-    icon: 'baidu',
-    family: 'Entypo',
+    title: 'Social Oppression',
+    icon: 'web',
+    family: 'Foundation',
   },
 ];
 
-class Grid extends React.Component {
+class CategoriesMenu extends React.Component {
   render() {
     const { navigation } = this.props;
     return (
       <Block safe flex>
         <NavBar
           fix
-          title="Grid"
-          onLeftPress={() => navigation.openDrawer()}
+          title="Response Category"
           style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE } : null}
+          left={(
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <Icon 
+                name="menu"
+                family="feather"
+                size={theme.SIZES.BASE * 1.7}
+                color={theme.COLORS.ICON}
+              />
+            </TouchableOpacity>
+          )}
         />
         <Block style={styles.grid}>
           {
-            chunk(grids, 3).map((row, rowId) => (
+            chunk(grids, 2).map((row, rowId) => (
               <Block row space="evenly" key={`row-${rowId}`}>
                 {
                   row.map(grid => (
                     <Block shadow middle style={styles.block} key={`grid-${grid.title}}`}>
                       <Button color="transparent" style={styles.button} onPress={() => navigation.openDrawer()}>
-                        <Block flex middle>
-                          <Icon name={grid.icon} family={grid.family} size={BASE_SIZE * 1.875} />
-                          <Text size={BASE_SIZE * 0.875}>
+                        <Block flex middle >
+                          <Icon name={grid.icon} family={grid.family} color={grid.icon} size={BASE_SIZE * 3.075} />
+                          <Text size={BASE_SIZE * 1.175}>
                             {grid.title}
                             {' '}
                           </Text>
@@ -96,8 +104,8 @@ const styles = StyleSheet.create({
   block: {
     backgroundColor: COLOR_WHITE,
     borderRadius: BASE_SIZE / 2,
-    height: width * 0.28,
-    width: width * 0.28,
+    height: width * 0.38,
+    width: width * 0.38,
     shadowOpacity: 0.4,
     elevation: BASE_SIZE / 2,
   },
@@ -107,4 +115,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Grid;
+export default CategoriesMenu;
