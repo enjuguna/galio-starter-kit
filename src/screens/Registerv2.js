@@ -5,10 +5,11 @@ import {
   StyleSheet,
   KeyboardAvoidingView,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 // galio component
 import {
-  Block, Button, Input, Text, NavBar,
+  Block, Button, Input, Text, NavBar, Icon,
 } from 'galio-framework';
 import theme from '../theme';
 
@@ -25,6 +26,7 @@ class Registerv2 extends React.Component {
     email: '',
     password: '',
   };
+
 
   handleGoBack = () => this.props.navigation.openDrawer();
 
@@ -48,30 +50,31 @@ class Registerv2 extends React.Component {
   handleSignIn = () => this.props.navigation.navigate('Login')
 
   render() {
+    const { navigation } = this.props;
+
     return (
       <Block safe flex style={styles.container}>
         <NavBar
-          transparent
-          back
-          leftStyle={{ marginLeft: MARGIN_LEFT }}
-          leftIconColor={theme.COLORS.GREY}
-          onLeftPress={this.handleGoBack}
+          title="Register"
+          left={(
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <Icon 
+                name="menu"
+                family="feather"
+                size={theme.SIZES.BASE * 1.7}
+                color={theme.COLORS.ICON}
+              />
+            </TouchableOpacity>
+          )}
+          style={Platform.OS === 'android' ? { marginTop: theme.SIZES.BASE  } : null}
         />
         <ScrollView style={styles.flex} keyboardShouldPersistTaps="handled">
           <KeyboardAvoidingView
             behavior="position"
             keyboardVerticalOffset={5}
           >
-            <Header title="Create new account" />
+            <Header title="Sign up to be a HRD" />
             <Block flex>
-              <SocialButtons
-                onPressFacebook={this.handleOnPressSocial}
-                onPressTwitter={this.handleOnPressSocial}
-                onPressInstagram={this.handleOnPressSocial}
-              />
-              <Text muted center size={theme.SIZES.FONT * 0.875}>
-                or Sign Up with email
-              </Text>
             </Block>
             <Block flex middle>
               <Form handleChange={this.handleChange} />
@@ -192,18 +195,9 @@ const SignButtons = ({ handleSignUp, handleSignIn }) => (
       color="info"
       onPress={handleSignUp}
     >
-      Sign up
+      Sign In 
     </Button>
-    <Button
-      round
-      color="transparent"
-      style={[styles.button, styles.borderColor]}
-      onPress={handleSignIn}
-    >
-      <Text center color={theme.COLORS.BLACK}>
-        Sign In
-      </Text>
-    </Button>
+   
   </Block>
 );
 
