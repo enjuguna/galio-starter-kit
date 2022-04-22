@@ -14,11 +14,11 @@ import {
   Text, Button, Block, NavBar, Icon
 } from 'galio-framework';
 import theme from '../theme';
-import PoliceCon from '../components/PoliceCon';
+import SubProvinceCon from '../components/SubProvinceCon';
 
 const { height } = Dimensions.get('window');
 
-class PoliceContacts extends React.Component {
+class PoliceConSubProvince extends React.Component {
 
 
 
@@ -54,12 +54,12 @@ class PoliceContacts extends React.Component {
                   ]}
           
             />
-                  <Text h5 flex style={{ padding: theme.SIZES.BASE }}>Counties</Text>
+                  <Text h5 flex style={{ padding: theme.SIZES.BASE }}>Sub-Counties</Text>
 
           <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
           <Block flex style={{ padding: theme.SIZES.BASE }}>
               </Block>
-              <PoliceCon/>
+              <SubProvinceCon/>
               </ScrollView>
           </Block>
         
@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default PoliceContacts;
+export default PoliceConSubProvince;

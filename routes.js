@@ -28,6 +28,7 @@ import FAQ from './src/screens/FAQ';
 import PreviewLocation from './src/screens/PreviewLocation';
 import PoliceContacts from './src/screens/PoliceContacts';
 import CategoriesMenu from './src/screens/CategoriesMenu';
+import PoliceConSubProvince from './src/screens/PoliceConSubProvince';
 
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
@@ -133,6 +134,13 @@ const screens = {
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
+  PoliceConSubProvince: {
+    screen: PoliceConSubProvince,
+    navigationOptions: {
+      drawerLabel: 'PoliceConSubProvince',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
   CategoriesMenu: {
     screen: CategoriesMenu,
     navigationOptions: {
@@ -190,13 +198,13 @@ const screens = {
   //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
   //   },
   // },
-  // Login: {
-  //   screen: Login,
-  //   navigationOptions: {
-  //     drawerLabel: 'Login Screen',
-  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-  //   },
-  // },
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      drawerLabel: 'Login Screen',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
   // Register: {
   //   screen: Register,
   //   navigationOptions: {

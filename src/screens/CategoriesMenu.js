@@ -14,7 +14,6 @@ const chunk = (arr, size) => {
     .map(() => arr.splice(0, size));
   return list;
 };
-
 const grids = [
   {
     title: 'Dawn Raids',
@@ -26,6 +25,7 @@ const grids = [
     icon: 'laptop',
     family: 'Foundation',
   },
+  
   {
     title: 'Unannounced Visit',
     icon: 'unlock',

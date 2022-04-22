@@ -17,7 +17,11 @@ const COLOR_GREY = theme.COLORS.MUTED; // '#D8DDE1';
 
 const { width } = Dimensions.get('screen');
 
+
+
 export default class Landing extends React.Component {
+
+  
     
   render() {
     const { navigation } = this.props;
@@ -61,7 +65,7 @@ export default class Landing extends React.Component {
     </Block>
     
     <Block style={{ padding: theme.SIZES.BASE }}>
-    <Text style={{ marginVertical: theme.SIZES.FONT / 4 }} h4>Options</Text>
+    <Text style={{ marginVertical: theme.SIZES.FONT / 4 }} h4>Public Information</Text>
     </Block>
     <Block row center card shadow space="between" style={styles.card1} key={'title'} onPress={() => navigation.openDrawer()}>
           <Icon
