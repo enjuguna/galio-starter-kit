@@ -38,7 +38,6 @@ export default class SubProvinceCon extends React.Component {
         });
     }
 
-    
 
 
     render() {

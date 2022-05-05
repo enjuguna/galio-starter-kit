@@ -28,12 +28,9 @@ const MapComponent = () => {
                     center: {
                         latitude: {location,latitude},
                         longitude: {location,longitude}
-
                     },
                     zoom: 15
-
                 }, 
-                
                 5000
                 );
             }
